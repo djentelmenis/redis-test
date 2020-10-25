@@ -4,7 +4,7 @@
   "description": "A key-value example for my data processing systems homework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/djentelmenis/redis-test/issues"
   },
-  "homepage": "https://github.com/djentelmenis/redis-test#readme"
+  "homepage": "https://github.com/djentelmenis/redis-test#readme",
+  "dependencies": {
+    "tedis": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.2",
+    "typescript": "^4.0.3"
+  }
 }
