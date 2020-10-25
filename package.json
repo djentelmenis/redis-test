@@ -1,0 +1,23 @@
+{
+  "name": "md1",
+  "version": "0.0.1",
+  "description": "A key-value example for my data processing systems homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djentelmenis/redis-test.git"
+  },
+  "keywords": [
+    "redis",
+    "node"
+  ],
+  "author": "Kaspars Putniņš",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djentelmenis/redis-test/issues"
+  },
+  "homepage": "https://github.com/djentelmenis/redis-test#readme"
+}
