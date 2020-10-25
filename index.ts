@@ -44,7 +44,7 @@ const print = async (values?: string[]) => {
   }
 
   // @ts-ignore
-  values = (await tedis.mget(...keys))
+  values = await tedis.mget(...keys);
 
   console.log(values?.map((value, i) => `key_${i} - ${value}`));
 };
@@ -71,7 +71,7 @@ const changeKeys = async () => {
   console.log('\nChanging keys - every 5th key');
 
   for (let i = 0; i < NR_OF_KEYS; i += 5) {
-    const oldValue = await tedis.get(`key_${i}`) as string;
+    const oldValue = (await tedis.get(`key_${i}`)) as string;
     await tedis.setrange(`key_${i}`, 2, `___${oldValue.slice(2)}`);
   }
   await print();
@@ -86,7 +86,7 @@ const getKeys = async () => {
   }
 
   // @ts-ignore
-  const queriedValues = (await tedis.mget(...keys)) as string[]
+  const queriedValues = (await tedis.mget(...keys)) as string[];
 
   await print(queriedValues);
 };
